@@ -24,6 +24,7 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> SHIT_BLOCK = registerBlock("shit_block",
             ()-> new Block(BlockBehaviour.Properties.of()
+                    .requiresCorrectToolForDrops()
                     .strength(2f).sound(SoundType.MUD)));
 
 
