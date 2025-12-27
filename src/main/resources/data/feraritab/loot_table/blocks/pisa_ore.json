@@ -26,7 +26,7 @@
                   }
                 }
               ],
-              "name": "feraritab:pise_ore"
+              "name": "feraritab:pisa_ore"
             },
             {
               "type": "minecraft:item",
@@ -40,7 +40,7 @@
                   "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "feraritab:raw_pise"
+              "name": "feraritab:raw_pisа"
             }
           ]
         }
@@ -48,5 +48,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "feraritab:blocks/pise_ore"
+  "random_sequence": "feraritab:blocks/pisа_ore"
 }
