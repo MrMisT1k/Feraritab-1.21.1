@@ -34,10 +34,13 @@ public class ShitballItem extends Item implements ProjectileItem {
                 0.4F / (pLevel.getRandom().nextFloat() * 0.4F + 0.8F)
         );
         if (!pLevel.isClientSide) {
-            Snowball snowball = new Snowball(pLevel, pPlayer);
-            snowball.setItem(itemstack);
-            snowball.shootFromRotation(pPlayer, pPlayer.getXRot(), pPlayer.getYRot(), 0.0F, 1.5F, 1.0F);
-            pLevel.addFreshEntity(snowball);
+            for(int i = 0;i < 10;++i){
+                Snowball snowball = new Snowball(pLevel, pPlayer);
+                snowball.setItem(itemstack);
+                snowball.shootFromRotation(pPlayer, pPlayer.getXRot(), pPlayer.getYRot()+i*200, 0.0F, 1.5F, 1.0F);
+                pLevel.addFreshEntity(snowball);
+            }
+
         }
 
         pPlayer.awardStat(Stats.ITEM_USED.get(this));
