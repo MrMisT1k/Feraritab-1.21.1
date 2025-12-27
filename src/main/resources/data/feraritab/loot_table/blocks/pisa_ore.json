@@ -40,7 +40,7 @@
                   "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "feraritab:raw_pisа"
+              "name": "feraritab:raw_pisa"
             }
           ]
         }
@@ -48,5 +48,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "feraritab:blocks/pisа_ore"
+  "random_sequence": "feraritab:blocks/pisa_ore"
 }
