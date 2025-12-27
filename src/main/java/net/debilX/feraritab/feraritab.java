@@ -52,15 +52,7 @@ public class feraritab {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.PISA);
-            event.accept(ModItems.BLUE_BAMBOO);
-            event.accept(ModItems.RAW_PISA);
-        }
-        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(ModBlocks.PISA_BLOCK);
-            event.accept(ModBlocks.SHIT_BLOCK);
-        }
+
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
