@@ -11,7 +11,7 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, feraritab.MOD_ID);
 
-    public static final RegistryObject<Item> PIISA = ITEMS.register("pisa",
+    public static final RegistryObject<Item> PIISA = ITEMS.register("pisa",//Какая пицца блять
         () -> new Item(new Item.Properties()));
     //Регистрация предмета 123 uqjlf
 
