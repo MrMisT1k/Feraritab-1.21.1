@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import net.debilX.feraritab.block.ModBlocks;
 import net.debilX.feraritab.item.ModCreativeModTabs;
 import net.debilX.feraritab.item.ModItems;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.CreativeModeTabRegistry;
@@ -36,6 +37,7 @@ public class feraritab {
         ModCreativeModTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
