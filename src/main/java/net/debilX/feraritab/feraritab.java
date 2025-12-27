@@ -50,6 +50,7 @@ public class feraritab {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.PIISA);
+            event.accept(ModItems.RAW_PIISA);
         }
     }
 
