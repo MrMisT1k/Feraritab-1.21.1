@@ -31,6 +31,7 @@ public class ModCreativeModTabs {
                     .title(Component.translatable("creativetab.feraritab.debil2"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept((ModItems.BLUE_BAMBOO.get()));
+                        pOutput.accept((ModItems.SHITBALL.get()));
                         pOutput.accept(ModBlocks.SHIT_BLOCK.get());
 
                     }).build());
