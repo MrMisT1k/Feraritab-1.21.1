@@ -13,7 +13,7 @@ public class ModItems {
 
     public static final RegistryObject<Item> PIISA = ITEMS.register("pisa",//Какая пицца блять
         () -> new Item(new Item.Properties()));
-    //Регистрация предмета 123 uqjlf
+    //Регистрация предмета
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
