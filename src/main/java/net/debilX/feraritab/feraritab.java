@@ -1,6 +1,7 @@
 package net.debilX.feraritab;
 
 import com.mojang.logging.LogUtils;
+import net.debilX.feraritab.block.ModBlocks;
 import net.debilX.feraritab.item.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -34,6 +35,7 @@ public class feraritab {
 
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -49,9 +51,12 @@ public class feraritab {
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.PIISA);
+            event.accept(ModItems.PISA);
             event.accept(ModItems.BLUE_BAMBOO);
-            event.accept(ModItems.RAW_PIISA);
+            event.accept(ModItems.RAW_PISA);
+        }
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.PISA_BLOCK);
         }
     }
 

@@ -11,10 +11,10 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, feraritab.MOD_ID);
 
-    public static final RegistryObject<Item> PIISA = ITEMS.register("pisa",
+    public static final RegistryObject<Item> PISA = ITEMS.register("pisa",
         () -> new Item(new Item.Properties()));
     //Регистрация предмета
-    public static final RegistryObject<Item> RAW_PIISA = ITEMS.register("raw_pisa",
+    public static final RegistryObject<Item> RAW_PISA = ITEMS.register("raw_pisa",
         () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> BLUE_BAMBOO = ITEMS.register("blue_bamboo",
