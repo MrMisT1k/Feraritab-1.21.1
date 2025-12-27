@@ -51,6 +51,7 @@ public class feraritab {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.PIISA);
             event.accept(ModItems.RAW_PIISA);
+            event.accept(ModItems.BLUE_BAMBOO);
         }
     }
 
