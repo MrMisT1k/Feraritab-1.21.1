@@ -21,6 +21,7 @@ public class ModCreativeModTabs {
                         pOutput.accept((ModItems.PISA.get()));
                         pOutput.accept(ModItems.RAW_PISA.get());
                         pOutput.accept(ModBlocks.PISA_BLOCK.get());
+                        pOutput.accept(ModBlocks.PISA_ORE.get());
 
                     }).build());
 
