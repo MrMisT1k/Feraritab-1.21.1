@@ -15,6 +15,9 @@ public class ModItems {
         () -> new Item(new Item.Properties()));
     //Регистрация предмета
 
+    public static final RegistryObject<Item> BLUE_BAMBOO = ITEMS.register("blue_bamboo",
+            () -> new Item(new Item.Properties()));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
