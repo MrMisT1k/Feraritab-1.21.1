@@ -1,8 +1,8 @@
 package net.debilX.feraritab;
 
 import com.mojang.logging.LogUtils;
+import net.debilX.feraritab.block.ModBlocks;
 import net.debilX.feraritab.item.ModItems;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.CreativeModeTabRegistry;
@@ -52,6 +52,11 @@ public class feraritab {
             event.accept(ModItems.PIISA);
             event.accept(ModItems.RAW_PIISA);
             event.accept(ModItems.BLUE_BAMBOO);
+            event.accept(ModItems.PISA);
+            event.accept(ModItems.RAW_PISA);
+        }
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.PISA_BLOCK);
         }
     }
 

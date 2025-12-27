@@ -1,5 +1,7 @@
 {
   "item.feraritab.pisa": "Pisa",
   "item.feraritab.raw_pisa": "raw_Pisa",
-  "item.feraritab.blue_bamboo": "Blue Bamboo"
+  "item.feraritab.blue_bamboo": "Blue Bamboo",
+
+  "block.feraritab.pisa_block": "Pisa Block"
 }
