@@ -14,6 +14,8 @@ public class ModItems {
     public static final RegistryObject<Item> PIISA = ITEMS.register("pisa",
         () -> new Item(new Item.Properties()));
     //Регистрация предмета
+    public static final RegistryObject<Item> RAW_PIISA = ITEMS.register("raw_pisa",
+        () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
