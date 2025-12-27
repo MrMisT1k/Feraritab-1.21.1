@@ -57,6 +57,7 @@ public class feraritab {
         }
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.PISA_BLOCK);
+            event.accept(ModBlocks.SHIT_BLOCK);
         }
     }
 
