@@ -2,6 +2,7 @@ package net.debilX.feraritab;
 
 import com.mojang.logging.LogUtils;
 import net.debilX.feraritab.block.ModBlocks;
+import net.debilX.feraritab.item.ModCreativeModTabs;
 import net.debilX.feraritab.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -32,6 +33,7 @@ public class feraritab {
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
+        ModCreativeModTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
 
