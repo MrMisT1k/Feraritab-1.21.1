@@ -28,7 +28,8 @@ public class ModItems {
     public static final RegistryObject<Item> SHITBALL = ITEMS.register("shitball",
             () -> new ShitballItem(new Item.Properties()));
 
-
+    public static final RegistryObject<Item> Z_BURGER = ITEMS.register("z_burger",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.Z_BURGER)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
