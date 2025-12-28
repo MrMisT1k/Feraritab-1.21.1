@@ -36,6 +36,7 @@ public class ModCreativeModTabs {
                         pOutput.accept((ModItems.BLUE_BAMBOO.get()));
                         pOutput.accept((ModItems.SHITBALL.get()));
                         pOutput.accept(ModBlocks.SHIT_BLOCK.get());
+                        pOutput.accept(ModBlocks.SHIT_TURRET.get());
 
                     }).build());
 
