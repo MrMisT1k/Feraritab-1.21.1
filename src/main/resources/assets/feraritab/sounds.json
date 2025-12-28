@@ -1,0 +1,39 @@
+{
+  "zero_use": {
+    "subtitle": "sounds.feraritab.zero_use",
+    "sounds": [
+      "feraritab:zero_use"
+    ]
+  },
+  "zero_block_break": {
+    "subtitle": "sounds.feraritab.zero_block_break",
+    "sounds": [
+      "feraritab:zero_block_break"
+    ]
+  },
+  "zero_block_step": {
+    "subtitle": "sounds.feraritab.zero_block_step",
+    "sounds": [
+      "feraritab:zero_block_step_1",
+      "feraritab:zero_block_step_2"
+    ]
+  },
+  "zero_block_place": {
+    "subtitle": "sounds.feraritab.zero_block_place",
+    "sounds": [
+      "feraritab:zero_block_place"
+    ]
+  },
+  "zero_block_hit": {
+    "subtitle": "sounds.feraritab.zero_block_hit",
+    "sounds": [
+      "feraritab:zero_block_hit"
+    ]
+  },
+  "zero_block_fall": {
+    "subtitle": "sounds.feraritab.zero_block_fall",
+    "sounds": [
+      "feraritab:zero_block_fall"
+    ]
+  }
+}
