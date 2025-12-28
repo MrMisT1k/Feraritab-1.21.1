@@ -23,6 +23,8 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModBlocks.PISA_BLOCK.get());
                         pOutput.accept(ModBlocks.PISA_ORE.get());
                         pOutput.accept((ModItems.CHISEL.get()));
+                        pOutput.accept((ModBlocks.REZE_BLOCK.get()));
+
 
                     }).build());
 

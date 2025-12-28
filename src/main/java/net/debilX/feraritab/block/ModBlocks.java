@@ -1,7 +1,9 @@
 package net.debilX.feraritab.block;
 
+import net.debilX.feraritab.block.custom.RezeBlock;
 import net.debilX.feraritab.feraritab;
 import net.debilX.feraritab.item.ModItems;
+import net.debilX.feraritab.sound.ModSounds;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -32,6 +34,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> PISA_ORE = registerBlock("pisa_ore",
             () -> new DropExperienceBlock(UniformInt.of(2,4), BlockBehaviour.Properties.of()
                     .strength(1f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> REZE_BLOCK = registerBlock("reze_block",
+            () -> new RezeBlock(BlockBehaviour.Properties.of()
+                    .strength(1f).requiresCorrectToolForDrops().sound(ModSounds.ZERO_BLOCK_SOUNDS)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
