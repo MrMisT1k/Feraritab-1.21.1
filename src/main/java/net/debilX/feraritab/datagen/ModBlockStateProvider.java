@@ -19,7 +19,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.PISA_ORE);
         blockWithItem(ModBlocks.SHIT_BLOCK);
         blockWithItem(ModBlocks.SHIT_TURRET);
-        blockWithItem(ModBlocks.PISA_BLOCK);
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject){
