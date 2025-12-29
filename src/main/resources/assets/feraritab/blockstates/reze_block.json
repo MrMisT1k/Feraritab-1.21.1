@@ -1,6 +1,0 @@
-{
-  "variants": {
-    "active=false": { "model": "feraritab:block/reze_block" },
-    "active=true": { "model": "feraritab:block/reze_block_2" }
-  }
-}

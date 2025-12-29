@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "feraritab:block/reze_block_2"
-  }
-}
-
