@@ -16,7 +16,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.RAW_PISA.get());
         basicItem(ModItems.SHITBALL.get());
         basicItem(ModItems.BLUE_BAMBOO.get());
-        basicItem(ModItems.CHISEL.get());
+        withExistingParent(ModItems.CHISEL.getId().toString(), mcLoc("item/generated"))
+                .texture("layer0", modLoc("item/boom"));
         basicItem(ModItems.PISA.get());
+        basicItem(ModItems.Z_BURGER.get());
     }
 }
