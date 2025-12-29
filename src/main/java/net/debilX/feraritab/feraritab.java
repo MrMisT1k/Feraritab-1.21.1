@@ -56,8 +56,8 @@ public class feraritab {
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.PIISA);
-            event.accept(ModItems.RAW_PIISA);
+            event.accept(ModItems.PISA);
+            event.accept(ModItems.RAW_PISA);
             event.accept(ModItems.BLUE_BAMBOO);
             event.accept(ModItems.PISA);
             event.accept(ModItems.RAW_PISA);
