@@ -41,7 +41,7 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> REZE_BLOCK = registerBlock("reze_block",
             () -> new RezeBlock(BlockBehaviour.Properties.of()
-                    .strength(1f).requiresCorrectToolForDrops().sound(ModSounds.ZERO_BLOCK_SOUNDS)));
+                    .strength(1f).sound(ModSounds.ZERO_BLOCK_SOUNDS)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

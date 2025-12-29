@@ -11,16 +11,6 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_brown_dye": {
-      "conditions": {
-        "items": [
-          {
-            "items": "minecraft:brown_dye"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
     "has_the_recipe": {
       "conditions": {
         "recipe": "feraritab:blue_bamboo"
@@ -31,8 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_bamboo",
-      "has_brown_dye"
+      "has_bamboo"
     ]
   ],
   "rewards": {

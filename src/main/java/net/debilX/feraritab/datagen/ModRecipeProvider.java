@@ -10,6 +10,8 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
+import net.minecraftforge.fml.loading.moddiscovery.ModValidator;
+import org.apache.logging.log4j.core.appender.rolling.action.PathSortByModificationTime;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -28,19 +30,43 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', Items.BROWN_DYE)
-                .unlockedBy(getHasName(Items.BROWN_DYE), has(Items.BROWN_DYE)).save(pRecipeOutput, feraritab.MOD_ID + "shit_block_from_brown_dye");
+                .unlockedBy(getHasName(Items.BROWN_DYE), has(Items.BROWN_DYE)).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PISA_BLOCK.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.PISA.get())
+                .unlockedBy(getHasName(ModItems.PISA.get()), has(ModItems.PISA.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SHIT_TURRET.get())
+                .pattern(" A ")
+                .pattern("ABA")
+                .pattern(" A ")
+                .define('A', Items.DISPENSER)
+                .define('B', ModBlocks.SHIT_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.SHIT_BLOCK.get()), has(ModBlocks.SHIT_BLOCK.get())).save(pRecipeOutput);
+
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.BLUE_BAMBOO.get(), 1)
                 .requires(Items.BAMBOO)
-                .requires(Items.BROWN_DYE)
-                .unlockedBy(getHasName(Items.BAMBOO), has(Items.BAMBOO))
-                .unlockedBy(getHasName(Items.BROWN_DYE), has(Items.BROWN_DYE)).save(pRecipeOutput);
+                .requires(Items.BLUE_DYE)
+                .unlockedBy(getHasName(Items.BAMBOO), has(Items.BAMBOO)).save(pRecipeOutput);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.SHITBALL.get(), 4)
+                .requires(ModBlocks.SHIT_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.SHIT_BLOCK.get()), has(ModBlocks.SHIT_BLOCK.get())).save(pRecipeOutput);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.PISA.get(), 9)
+                .requires(ModBlocks.PISA_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.PISA_BLOCK.get()), has(ModBlocks.PISA_BLOCK.get())).save(pRecipeOutput, feraritab.MOD_ID);
+
 
         oreSmelting(pRecipeOutput, PISA_SMELTABLES, RecipeCategory.MISC, ModItems.PISA.get(), 0.25f, 200, "pisa");
         oreBlasting(pRecipeOutput, PISA_SMELTABLES, RecipeCategory.MISC, ModItems.PISA.get(), 0.25f, 200, "pisa");
-
-
     }
+
+
     protected static void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,
                                       float pExperience, int pCookingTIme, String pGroup) {
         oreCooking(recipeOutput, RecipeSerializer.SMELTING_RECIPE, SmeltingRecipe::new, pIngredients, pCategory, pResult,
