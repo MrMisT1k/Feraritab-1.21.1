@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_raw_pisa": {
+      "conditions": {
+        "items": [
+          {
+            "items": "feraritab:raw_pisa"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "feraritab:pisa_from_blasting_raw_pisa"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_raw_pisa"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "feraritab:pisa_from_blasting_raw_pisa"
+    ]
+  }
+}
