@@ -1,0 +1,4 @@
+// 1.21.1	2025-12-29T15:18:07.2555019	Tags for minecraft:block mod id feraritab
+72feabd4c0387e8b13d5e0e881f2faf40e856c4d data/minecraft/tags/block/mineable/hoe.json
+a82999054d0e1675915e83ea7021d7a827a980e6 data/minecraft/tags/block/mineable/pickaxe.json
+4f568e94c61ca3ef96fdd84f2e698370032a6b18 data/minecraft/tags/block/needs_iron_tool.json
