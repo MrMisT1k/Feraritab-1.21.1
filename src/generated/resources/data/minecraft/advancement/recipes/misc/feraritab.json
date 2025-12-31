@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_pisa_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "feraritab:pisa_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:feraritab"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_pisa_block"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:feraritab"
+    ]
+  }
+}
