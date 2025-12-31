@@ -15,5 +15,7 @@
   "creativetab.feraritab.debil1": "Это сделал Максим",
   "creativetab.feraritab.debil2": "Это сделал первый дебил",
 
-  "tooltip.feraritab.rezeblock.tooltip": "§7§o§lСУКА ЭТО ЕБУЧИЙ МРАМОР§r"
+  "tooltip.feraritab.rezeblock.tooltip": "§7§o§lСУКА ЭТО ЕБУЧИЙ МРАМОР§r",
+  "tooltip.feraritab.rezeblock.chiselitem.shift": "§o§hИспользует вашу жизниную энергию§r",
+  "tooltip.feraritab.rezeblock.chiselitem": "Нажми §eShift§r что бы получить Информацию"
 }

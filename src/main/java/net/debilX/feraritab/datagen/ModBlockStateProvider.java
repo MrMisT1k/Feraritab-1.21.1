@@ -36,8 +36,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
                         ResourceLocation.fromNamespaceAndPath(feraritab.MOD_ID, "block/" + "reze_block")))};
             }
         });
-        simpleBlockItem(ModBlocks.REZE_BLOCK.get(), models().cubeAll("reze_block_2",
-                ResourceLocation.fromNamespaceAndPath(feraritab.MOD_ID, "block/" + "reze_block_2")));
+        simpleBlockItem(ModBlocks.REZE_BLOCK.get(), models().cubeAll("reze_block",
+                ResourceLocation.fromNamespaceAndPath(feraritab.MOD_ID, "block/" + "reze_block")));
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject){

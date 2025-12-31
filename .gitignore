@@ -20,6 +20,18 @@ build
 # other
 eclipse
 run
+run-data/
+logs/
+*.log
+*.log.gz
+
+# Generated resources
+src/generated/
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
 
 # Files from Forge MDK
 forge*changelog.txt

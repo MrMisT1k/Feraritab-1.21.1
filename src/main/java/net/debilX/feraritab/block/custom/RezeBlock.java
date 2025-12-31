@@ -1,15 +1,20 @@
 package net.debilX.feraritab.block.custom;
 
+import net.debilX.feraritab.item.ModItems;
 import net.debilX.feraritab.sound.ModSounds;
+import net.debilX.feraritab.util.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -63,6 +68,25 @@ public class RezeBlock extends Block {
         if (state.getValue(ACTIVE)) {
             level.setBlock(pos, state.setValue(ACTIVE, false), 3);
         }
+    }
+
+    @Override
+    public void stepOn(Level pLevel, BlockPos pPos, BlockState pState, Entity pEntity) {
+        if(pEntity instanceof ItemEntity itemEntity) {
+            if(isValidItem(itemEntity.getItem())) {
+                itemEntity.setItem(new ItemStack(Items.DIAMOND, itemEntity.getItem().getCount()));
+            }
+
+            if(itemEntity.getItem().getItem() == ModItems.BLUE_BAMBOO.get()) {
+                itemEntity.setItem(new ItemStack(Items.EMERALD, itemEntity.getItem().getCount()));
+            }
+        }
+
+        super.stepOn(pLevel, pPos, pState, pEntity);
+    }
+
+    private boolean isValidItem(ItemStack item) {
+        return item.is(ModTags.Items.TRANSFORMABLE_ITEMS);
     }
 
     @Override

@@ -1,6 +1,8 @@
 package net.debilX.feraritab.datagen;
 
 import net.debilX.feraritab.feraritab;
+import net.debilX.feraritab.item.ModItems;
+import net.debilX.feraritab.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
@@ -17,6 +19,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
-
+        this.tag(ModTags.Items.TRANSFORMABLE_ITEMS)
+            .add(ModItems.PISA.get(), ModItems.RAW_PISA.get(), ModItems.BLUE_BAMBOO.get());
     }
 }
