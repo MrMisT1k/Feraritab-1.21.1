@@ -8,6 +8,8 @@ import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.loading.moddiscovery.ModValidator;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.Set;
@@ -26,6 +28,9 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
         this.add(ModBlocks.PISA_ORE.get(),
                 block -> createOreDrop(ModBlocks.PISA_ORE.get(), ModItems.RAW_PISA.get()));
+
+        this.add(ModBlocks.SHIT_PRESSURE_PLATE.get(),
+                block -> createSingleItemTableWithSilkTouch(ModBlocks.SHIT_PRESSURE_PLATE.get(), ModItems.SHITBALL.get()));
     }
 
     @Override

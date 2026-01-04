@@ -25,12 +25,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     protected void buildRecipes(RecipeOutput pRecipeOutput) {
         List<ItemLike> PISA_SMELTABLES = List.of(ModItems.RAW_PISA.get());//Сюда помещаем все предметы, которые при переплавке дают raw_pisa
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SHIT_BLOCK.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SHIT_BLOCK.get())//Если нужно больше 1го предмета, просто через запятую укажи, да
                 .pattern("AAA")
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', Items.BROWN_DYE)
-                .unlockedBy(getHasName(Items.BROWN_DYE), has(Items.BROWN_DYE)).save(pRecipeOutput);
+                .unlockedBy(getHasName(Items.BROWN_DYE), has(Items.BROWN_DYE)).save(pRecipeOutput);//Если несколько рецептов с одним результатом, через запятую указать название рецепта (модайди + название)
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PISA_BLOCK.get())
                 .pattern("AAA")
@@ -60,6 +60,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.PISA.get(), 9)
                 .requires(ModBlocks.PISA_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.PISA_BLOCK.get()), has(ModBlocks.PISA_BLOCK.get())).save(pRecipeOutput, feraritab.MOD_ID);
+
+
+        pressurePlate(pRecipeOutput,ModBlocks.SHIT_PRESSURE_PLATE.get(), ModItems.SHITBALL.get());
 
 
         oreSmelting(pRecipeOutput, PISA_SMELTABLES, RecipeCategory.MISC, ModItems.PISA.get(), 0.25f, 200, "pisa");

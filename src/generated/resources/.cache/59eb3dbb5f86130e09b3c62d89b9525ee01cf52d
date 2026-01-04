@@ -1,6 +1,7 @@
-// 1.21.1	2025-12-29T14:56:03.2683341	Loot Tables
+// 1.21.1	2026-01-04T15:28:16.8514302	Loot Tables
 08470c7d86c1719d2891524a54be9796303bff27 data/feraritab/loot_table/blocks/pisa_block.json
 0393dbfdfa14b3990fa4f5a3c80398f0d54ccc2a data/feraritab/loot_table/blocks/pisa_ore.json
 8fd84da2e14ab9fabddc8845927a42c7e40b1a59 data/feraritab/loot_table/blocks/reze_block.json
 7f99c818a5930307926e5a8604b5b4a7f0204225 data/feraritab/loot_table/blocks/shit_block.json
+994c48e89f6ace23d81af7e5e7d80d2ca2801e2c data/feraritab/loot_table/blocks/shit_pressure_plate.json
 dd9e53b734176d908a26ffced41deb032eb0d1f2 data/feraritab/loot_table/blocks/shit_turret.json

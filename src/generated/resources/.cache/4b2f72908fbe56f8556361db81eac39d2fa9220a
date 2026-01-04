@@ -1,17 +1,21 @@
-// 1.21.1	2025-12-30T00:53:54.5230422	Block States: feraritab
+// 1.21.1	2026-01-04T15:39:44.0706733	Block States: feraritab
 814121cae8b40be35b7bae301c767d55f0bc45b4 assets/feraritab/blockstates/pisa_block.json
 59e35b444773dc9b12c88563d7e6183c858a7059 assets/feraritab/blockstates/pisa_ore.json
 b4f622ac8d6da6f06aa1ae770ac5f51fd5a201be assets/feraritab/blockstates/reze_block.json
 9ecc5f57547d3837b869df188599b82f4d439a88 assets/feraritab/blockstates/shit_block.json
+4fc39c4898b9f7b78a3bd294817de85d4f981bae assets/feraritab/blockstates/shit_pressure_plate.json
 68495b3b8c34cea89e6adf148a07a8f6f2b2b383 assets/feraritab/blockstates/shit_turret.json
 312f949e51ffffdb338629827fe0415e9bfee2fb assets/feraritab/models/block/pisa_block.json
 31c22d5825bc9065f9a8517470b14487429c096a assets/feraritab/models/block/pisa_ore.json
 67cfe5a5a5fb9516e2f24a381835784ca055de4a assets/feraritab/models/block/reze_block.json
 a53ca38e6a808eacaf1ce250ca6c052708a3da6f assets/feraritab/models/block/reze_block_2.json
 45737a465523094927a18df4d599d4f11846f7d9 assets/feraritab/models/block/shit_block.json
+40f4a6b4f2442db439a06f0d5f33e208e952c98a assets/feraritab/models/block/shit_pressure_plate.json
+b11c611141c86fce20f730d173c9d15cab05cf3c assets/feraritab/models/block/shit_pressure_plate_down.json
 aeb744218a21122abf8578c55b5a0ed591c9a55e assets/feraritab/models/block/shit_turret.json
 2a9151c31dd58fd885ce72bd9905ce791e19755e assets/feraritab/models/item/pisa_block.json
 8c991819b2ceca52d9a0cd6fc7930630069ffd08 assets/feraritab/models/item/pisa_ore.json
 7cef20aea5f741540fac9611209712cfbc0c606e assets/feraritab/models/item/reze_block.json
 8692521ad978093edc734d471610ec9954251123 assets/feraritab/models/item/shit_block.json
+27bc37d80a39e016fc4cc689c4c166906e079dc2 assets/feraritab/models/item/shit_pressure_plate.json
 18215f63030ccca46eb2299000c099debf46333a assets/feraritab/models/item/shit_turret.json

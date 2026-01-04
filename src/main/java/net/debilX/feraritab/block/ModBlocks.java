@@ -8,10 +8,9 @@ import net.debilX.feraritab.sound.ModSounds;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.DropExperienceBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -42,6 +41,11 @@ public class ModBlocks {
     public static final RegistryObject<Block> REZE_BLOCK = registerBlock("reze_block",
             () -> new RezeBlock(BlockBehaviour.Properties.of()
                     .strength(1f).sound(ModSounds.ZERO_BLOCK_SOUNDS)));
+
+    public static final RegistryObject<PressurePlateBlock> SHIT_PRESSURE_PLATE = registerBlock("shit_pressure_plate",
+            () -> new PressurePlateBlock(BlockSetType.ACACIA, BlockBehaviour.Properties.of().strength(1)));
+
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

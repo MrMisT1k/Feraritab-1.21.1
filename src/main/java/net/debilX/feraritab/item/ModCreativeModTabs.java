@@ -38,6 +38,7 @@ public class ModCreativeModTabs {
                         pOutput.accept((ModItems.SHITBALL.get()));
                         pOutput.accept(ModBlocks.SHIT_BLOCK.get());
                         pOutput.accept(ModBlocks.SHIT_TURRET.get());
+                        pOutput.accept(ModBlocks.SHIT_PRESSURE_PLATE.get());
 
                     }).build());
 
