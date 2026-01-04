@@ -8,6 +8,9 @@ import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
+import net.minecraft.world.level.storage.loot.providers.number.NumberProvider;
+import net.minecraft.world.level.storage.loot.providers.number.NumberProviders;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.loading.moddiscovery.ModValidator;
 import net.minecraftforge.registries.RegistryObject;
@@ -30,7 +33,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 block -> createOreDrop(ModBlocks.PISA_ORE.get(), ModItems.RAW_PISA.get()));
 
         this.add(ModBlocks.SHIT_PRESSURE_PLATE.get(),
-                block -> createSingleItemTableWithSilkTouch(ModBlocks.SHIT_PRESSURE_PLATE.get(), ModItems.SHITBALL.get()));
+                block -> createSingleItemTableWithSilkTouch(ModBlocks.SHIT_PRESSURE_PLATE.get(), ModItems.SHITBALL.get(), ConstantValue.exactly(2)));
     }
 
     @Override

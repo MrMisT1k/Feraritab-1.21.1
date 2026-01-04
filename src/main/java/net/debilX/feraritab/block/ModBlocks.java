@@ -43,7 +43,7 @@ public class ModBlocks {
                     .strength(1f).sound(ModSounds.ZERO_BLOCK_SOUNDS)));
 
     public static final RegistryObject<PressurePlateBlock> SHIT_PRESSURE_PLATE = registerBlock("shit_pressure_plate",
-            () -> new PressurePlateBlock(BlockSetType.ACACIA, BlockBehaviour.Properties.of().strength(1)));
+            () -> new PressurePlateBlock(BlockSetType.ACACIA, BlockBehaviour.Properties.of().sound(SoundType.MUD).strength(1)));
 
 
 
