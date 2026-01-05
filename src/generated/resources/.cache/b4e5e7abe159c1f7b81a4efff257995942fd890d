@@ -1,4 +1,7 @@
-// 1.21.1	2025-12-29T15:18:07.2555019	Tags for minecraft:block mod id feraritab
+// 1.21.1	2026-01-05T20:12:21.0519135	Tags for minecraft:block mod id feraritab
+3df972e22a9b54cfdf78b5a9c9fad11a00d16c5b data/minecraft/tags/block/fences.json
+8ec4fda8347850b95e51d28e5326236993fff39c data/minecraft/tags/block/fence_gates.json
 72feabd4c0387e8b13d5e0e881f2faf40e856c4d data/minecraft/tags/block/mineable/hoe.json
 a82999054d0e1675915e83ea7021d7a827a980e6 data/minecraft/tags/block/mineable/pickaxe.json
 4f568e94c61ca3ef96fdd84f2e698370032a6b18 data/minecraft/tags/block/needs_iron_tool.json
+27f07a62d8c3aa296063edc51483ba8da47e7ada data/minecraft/tags/block/walls.json

@@ -30,6 +30,28 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.SHIT_PRESSURE_PLATE);
 
         rezeBlock();
+
+        stairsBlock(ModBlocks.PISA_STAIRS.get(), blockTexture(ModBlocks.PISA_BLOCK.get()));
+        slabBlock(ModBlocks.PISA_SLAB.get(), blockTexture(ModBlocks.PISA_BLOCK.get()), blockTexture(ModBlocks.PISA_BLOCK.get()));
+
+        buttonBlock(ModBlocks.PISA_BUTTON.get(), blockTexture(ModBlocks.PISA_BLOCK.get()));
+        pressurePlateBlock(ModBlocks.PISA_PRESSURE_PLATE.get(), blockTexture(ModBlocks.PISA_BLOCK.get()));
+
+        fenceBlock(ModBlocks.PISA_FENCE.get(), blockTexture(ModBlocks.PISA_BLOCK.get()));
+        fenceGateBlock(ModBlocks.PISA_FENCE_GATE.get(), blockTexture(ModBlocks.PISA_BLOCK.get()));
+        wallBlock(ModBlocks.PISA_WALL.get(), blockTexture(ModBlocks.PISA_BLOCK.get()));
+
+        doorBlockWithRenderType(ModBlocks.PISA_DOOR.get(), 
+                ResourceLocation.fromNamespaceAndPath(feraritab.MOD_ID, "block/pisa_door_bottom"),
+                ResourceLocation.fromNamespaceAndPath(feraritab.MOD_ID, "block/pisa_door_top"), "cutout");
+        trapdoorBlockWithRenderType(ModBlocks.PISA_TRAPDOOR.get(), 
+                ResourceLocation.fromNamespaceAndPath(feraritab.MOD_ID, "block/pisa_trapdoor"), true, "cutout");
+
+        blockItem(ModBlocks.PISA_STAIRS);
+        blockItem(ModBlocks.PISA_SLAB);
+        blockItem(ModBlocks.PISA_PRESSURE_PLATE);
+        blockItem(ModBlocks.PISA_FENCE_GATE);
+        blockItem(ModBlocks.PISA_TRAPDOOR);
     }
 
     private void rezeBlock() {

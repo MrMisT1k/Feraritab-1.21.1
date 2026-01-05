@@ -1,7 +1,16 @@
-// 1.21.1	2026-01-04T16:51:10.8374702	Loot Tables
+// 1.21.1	2026-01-05T20:12:21.047778	Loot Tables
 08470c7d86c1719d2891524a54be9796303bff27 data/feraritab/loot_table/blocks/pisa_block.json
+c667961bc296024cdf3cdff72d939abee4f08fe7 data/feraritab/loot_table/blocks/pisa_button.json
+b93b3afc92511b33daeb308039f79e8596ac7163 data/feraritab/loot_table/blocks/pisa_door.json
+47ec5b6b5f49353e9cc62abe4023b13baffc70c6 data/feraritab/loot_table/blocks/pisa_fence.json
+d95ab50293c1e7a4f70dd4069a74f3573b5f585f data/feraritab/loot_table/blocks/pisa_fence_gate.json
 0393dbfdfa14b3990fa4f5a3c80398f0d54ccc2a data/feraritab/loot_table/blocks/pisa_ore.json
+69d95e6b9b83506fe3231663be9f91ef42f73d90 data/feraritab/loot_table/blocks/pisa_pressure_plate.json
+655aaeb29e38830b9dc5119ccf68648d9ba3537d data/feraritab/loot_table/blocks/pisa_slab.json
+98fe407bf186a385bea4303aa4cd617747a27db1 data/feraritab/loot_table/blocks/pisa_stairs.json
+5bbad6c4b050c28d6ebd2e0c64d1af8f41f6c6ee data/feraritab/loot_table/blocks/pisa_trapdoor.json
+6a088a60a5f2f74f7cab9d97910aca07068a127a data/feraritab/loot_table/blocks/pisa_wall.json
 8fd84da2e14ab9fabddc8845927a42c7e40b1a59 data/feraritab/loot_table/blocks/reze_block.json
 7f99c818a5930307926e5a8604b5b4a7f0204225 data/feraritab/loot_table/blocks/shit_block.json
-a4b2e100f1fe718bc838e10f8b910671412771e8 data/feraritab/loot_table/blocks/shit_pressure_plate.json
+994c48e89f6ace23d81af7e5e7d80d2ca2801e2c data/feraritab/loot_table/blocks/shit_pressure_plate.json
 dd9e53b734176d908a26ffced41deb032eb0d1f2 data/feraritab/loot_table/blocks/shit_turret.json

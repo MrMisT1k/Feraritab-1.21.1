@@ -33,7 +33,22 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 block -> createOreDrop(ModBlocks.PISA_ORE.get(), ModItems.RAW_PISA.get()));
 
         this.add(ModBlocks.SHIT_PRESSURE_PLATE.get(),
-                block -> createSingleItemTableWithSilkTouch(ModBlocks.SHIT_PRESSURE_PLATE.get(), ModItems.SHITBALL.get(), ConstantValue.exactly(2)));
+                block -> createSingleItemTableWithSilkTouch(ModBlocks.SHIT_PRESSURE_PLATE.get(), ModItems.SHITBALL.get()));
+
+        dropSelf(ModBlocks.PISA_STAIRS.get());
+        this.add(ModBlocks.PISA_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.PISA_SLAB.get()));
+
+        dropSelf(ModBlocks.PISA_PRESSURE_PLATE.get());
+        dropSelf(ModBlocks.PISA_BUTTON.get());
+
+        dropSelf(ModBlocks.PISA_FENCE.get());
+        dropSelf(ModBlocks.PISA_FENCE_GATE.get());
+        dropSelf(ModBlocks.PISA_WALL.get());
+
+        this.add(ModBlocks.PISA_DOOR.get(),
+                block -> createDoorTable(ModBlocks.PISA_DOOR.get()));
+        dropSelf(ModBlocks.PISA_TRAPDOOR.get());
     }
 
     @Override

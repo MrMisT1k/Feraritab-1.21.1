@@ -25,6 +25,19 @@ public class ModCreativeModTabs {
                         pOutput.accept((ModItems.CHISEL.get()));
                         pOutput.accept((ModBlocks.REZE_BLOCK.get()));
                         pOutput.accept((ModItems.Z_BURGER.get()));
+                        pOutput.accept(ModBlocks.PISA_STAIRS.get());
+                        pOutput.accept(ModBlocks.PISA_SLAB.get());
+
+                        pOutput.accept(ModBlocks.PISA_PRESSURE_PLATE.get());
+                        pOutput.accept(ModBlocks.PISA_BUTTON.get());
+
+                        pOutput.accept(ModBlocks.PISA_FENCE.get());
+                        pOutput.accept(ModBlocks.PISA_FENCE_GATE.get());
+                        pOutput.accept(ModBlocks.PISA_WALL.get());
+
+                        pOutput.accept(ModBlocks.PISA_DOOR.get());
+                        pOutput.accept(ModBlocks.PISA_TRAPDOOR.get());
+
 
 
                     }).build());

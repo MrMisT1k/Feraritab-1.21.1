@@ -67,6 +67,25 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         oreSmelting(pRecipeOutput, PISA_SMELTABLES, RecipeCategory.MISC, ModItems.PISA.get(), 0.25f, 200, "pisa");
         oreBlasting(pRecipeOutput, PISA_SMELTABLES, RecipeCategory.MISC, ModItems.PISA.get(), 0.25f, 200, "pisa");
+
+        stairBuilder(ModBlocks.PISA_STAIRS.get(), Ingredient.of(ModItems.PISA.get())).group("pisa")
+                .unlockedBy(getHasName(ModItems.PISA.get()), has(ModItems.PISA.get())).save(pRecipeOutput);
+
+        slab(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PISA_SLAB.get(), ModItems.PISA.get());
+        buttonBuilder(ModBlocks.PISA_BUTTON.get(), Ingredient.of(ModItems.PISA.get())).group("pisa")
+                .unlockedBy(getHasName(ModItems.PISA.get()), has(ModItems.PISA.get())).save(pRecipeOutput);
+        pressurePlate(pRecipeOutput, ModBlocks.PISA_PRESSURE_PLATE.get(), ModItems.PISA.get());
+
+        fenceBuilder(ModBlocks.PISA_FENCE.get(), Ingredient.of(ModItems.PISA.get())).group("pisa")
+                .unlockedBy(getHasName(ModItems.PISA.get()), has(ModItems.PISA.get())).save(pRecipeOutput);
+        fenceGateBuilder(ModBlocks.PISA_FENCE_GATE.get(), Ingredient.of(ModItems.PISA.get())).group("pisa")
+                .unlockedBy(getHasName(ModItems.PISA.get()), has(ModItems.PISA.get())).save(pRecipeOutput);
+        wall(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PISA_WALL.get(), ModItems.PISA.get());
+
+        doorBuilder(ModBlocks.PISA_DOOR.get(), Ingredient.of(ModItems.PISA.get())).group("pisa")
+                .unlockedBy(getHasName(ModItems.PISA.get()), has(ModItems.PISA.get())).save(pRecipeOutput);
+        trapdoorBuilder(ModBlocks.PISA_TRAPDOOR.get(), Ingredient.of(ModItems.PISA.get())).group("pisa").
+                unlockedBy(getHasName(ModItems.PISA.get()), has(ModItems.PISA.get())).save(pRecipeOutput);
     }
 
 

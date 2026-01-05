@@ -32,5 +32,10 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.SHIT_TURRET.get())
                 .add(ModBlocks.PISA_ORE.get())
                 .add(ModBlocks.SHIT_BLOCK.get());
+
+        tag(BlockTags.FENCES).add(ModBlocks.PISA_FENCE.get());
+        tag(BlockTags.FENCE_GATES).add(ModBlocks.PISA_FENCE_GATE.get());
+        tag(BlockTags.WALLS).add(ModBlocks.PISA_WALL.get());
+
     }
 }
