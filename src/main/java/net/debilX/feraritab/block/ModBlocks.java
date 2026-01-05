@@ -42,7 +42,8 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> REZE_BLOCK = registerBlock("reze_block",
             () -> new RezeBlock(BlockBehaviour.Properties.of()
-                    .strength(1f).sound(ModSounds.ZERO_BLOCK_SOUNDS)));
+                    .strength(1f).sound(ModSounds.ZERO_BLOCK_SOUNDS)
+                    .lightLevel(state -> state.getValue(RezeBlock.ACTIVE) ? 15 : 0)));
 
     public static final RegistryObject<PressurePlateBlock> SHIT_PRESSURE_PLATE = registerBlock("shit_pressure_plate",
             () -> new PressurePlateBlock(BlockSetType.ACACIA, BlockBehaviour.Properties.of().sound(SoundType.MUD).strength(1)));
