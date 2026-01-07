@@ -1,10 +1,11 @@
-// 1.21.1	2026-01-05T22:43:29.2440199	Item Models: feraritab
+// 1.21.1	2026-01-07T16:55:21.926397	Item Models: feraritab
 0717ff8a7c2c3125371e707d09606ecfee8eb630 assets/feraritab/models/item/blue_bamboo.json
 b334137e6e430b3b20f12b2e431b25e223baa857 assets/feraritab/models/item/chisel.json
 391c925a41b20bb03f481c8c1d1e9935d088713f assets/feraritab/models/item/pisa.json
 be92af06019af3266e2f009d0b647736dc0a7eef assets/feraritab/models/item/pisa_button.json
 7ab73bd0b4c46a1d483607b6c2001c3a1a62b712 assets/feraritab/models/item/pisa_door.json
 d22b72ef9ddf001ee3b5d18e622dc1df010cd381 assets/feraritab/models/item/pisa_fence.json
+14534324299137dd49b86e54b8b8b9cde6330e6b assets/feraritab/models/item/pisa_trapdoor.json
 30c623ef7f7d2078881a22d9f5a5a27b303cc006 assets/feraritab/models/item/pisa_wall.json
 e37fc77d556243751cc39f74db2dd64b236311fd assets/feraritab/models/item/raw_pisa.json
 6817c6a352335ab00595582c652a510faa5c0141 assets/feraritab/models/item/shitball.json

@@ -32,6 +32,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.PISA_WALL, ModBlocks.PISA_BLOCK);
 
         simpleBlockItem(ModBlocks.PISA_DOOR);
+        trapdoorItem(ModBlocks.PISA_TRAPDOOR);
 
     }
     public void buttonItem(RegistryObject<? extends Block> block, RegistryObject<Block> baseBlock) {
@@ -49,7 +50,13 @@ public class ModItemModelProvider extends ItemModelProvider {
     public void wallItem(RegistryObject<? extends Block> block, RegistryObject<Block> baseBlock) {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/wall_inventory"))
                 .texture("wall",  ResourceLocation.fromNamespaceAndPath(feraritab.MOD_ID,
-                        "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+                        "   block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+    }
+
+    public void trapdoorItem(RegistryObject<? extends Block> block) {
+        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("item/generated"))
+                .texture("layer0", ResourceLocation.fromNamespaceAndPath(feraritab.MOD_ID,
+                        "block/" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath()));
     }
 
     private ItemModelBuilder simpleBlockItem(RegistryObject<? extends Block> item) {
