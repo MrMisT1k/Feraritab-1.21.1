@@ -1,13 +1,15 @@
 package net.debilX.feraritab.datagen;
 
 import net.debilX.feraritab.block.ModBlocks;
-import net.debilX.feraritab.block.custom.PatyBlock;
 import net.debilX.feraritab.block.custom.RezeBlock;
 import net.debilX.feraritab.feraritab;
 import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.PressurePlateBlock;
+import net.minecraft.world.level.block.WeightedPressurePlateBlock;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
@@ -26,7 +28,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.PISA_ORE);
         blockWithItem(ModBlocks.SHIT_BLOCK);
         blockWithItem(ModBlocks.SHIT_TURRET);
-        
+
         patyBlock();
 
         pressurePlateBlock(ModBlocks.SHIT_PRESSURE_PLATE.get(), blockTexture(ModBlocks.SHIT_BLOCK.get()));
@@ -34,6 +36,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.SHIT_PRESSURE_PLATE);
 
         rezeBlock();
+        pressureBomb();
 
         stairsBlock(ModBlocks.PISA_STAIRS.get(), blockTexture(ModBlocks.PISA_BLOCK.get()));
         slabBlock(ModBlocks.PISA_SLAB.get(), blockTexture(ModBlocks.PISA_BLOCK.get()), blockTexture(ModBlocks.PISA_BLOCK.get()));
@@ -57,21 +60,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.PISA_FENCE_GATE);
         blockItem(ModBlocks.PISA_TRAPDOOR);
     }
-
-    private void patyBlock() {
-        getVariantBuilder(ModBlocks.PATY_BLOCK.get()).forAllStates(state -> {
-            if(state.getValue(PatyBlock.ACTIVE)) {
-                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("paty_block_on",
-                        ResourceLocation.fromNamespaceAndPath(feraritab.MOD_ID, "block/" + "paty_block_on")))};
-            } else {
-                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("paty_block_off",
-                        ResourceLocation.fromNamespaceAndPath(feraritab.MOD_ID, "block/" + "paty_block_off")))};
-            }
-        });
-        simpleBlockItem(ModBlocks.PATY_BLOCK.get(), models().cubeAll("paty_block_off",
-                ResourceLocation.fromNamespaceAndPath(feraritab.MOD_ID, "block/" + "paty_block_off")));
-    }
-
 
     private void rezeBlock() {
         getVariantBuilder(ModBlocks.REZE_BLOCK.get()).forAllStates(state -> {

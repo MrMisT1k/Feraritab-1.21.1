@@ -1,5 +1,6 @@
 package net.debilX.feraritab.block;
 
+import net.debilX.feraritab.block.custom.PressureBomb;
 import net.debilX.feraritab.block.custom.ShitTurretBlock;
 import net.debilX.feraritab.block.custom.RezeBlock;
 import net.debilX.feraritab.block.custom.PatyBlock;
@@ -12,6 +13,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -40,6 +42,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> SHIT_TURRET = registerBlock("shit_turret",
             () -> new ShitTurretBlock(BlockBehaviour.Properties.of().strength(2f)));
+
+    public static final RegistryObject<Block> PRESSURE_BOMB = registerBlock("pressure_bomb",
+            () -> new PressureBomb(15, BlockSetType.COPPER, BlockBehaviour.Properties.of().strength(3f)));
 
     public static final RegistryObject<Block> REZE_BLOCK = registerBlock("reze_block",
             () -> new RezeBlock(BlockBehaviour.Properties.of()
