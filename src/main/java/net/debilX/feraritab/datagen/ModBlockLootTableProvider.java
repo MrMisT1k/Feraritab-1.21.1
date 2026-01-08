@@ -28,6 +28,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.REZE_BLOCK.get());
         dropSelf(ModBlocks.SHIT_BLOCK.get());
         dropSelf(ModBlocks.SHIT_TURRET.get());
+        dropSelf(ModBlocks.PRESSURE_BOMB.get());
 
         this.add(ModBlocks.PISA_ORE.get(),
                 block -> createOreDrop(ModBlocks.PISA_ORE.get(), ModItems.RAW_PISA.get()));

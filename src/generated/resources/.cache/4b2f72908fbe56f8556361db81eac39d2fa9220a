@@ -1,4 +1,4 @@
-// 1.21.1	2026-01-05T20:16:13.7267264	Block States: feraritab
+// 1.21.1	2026-01-08T12:11:00.472015	Block States: feraritab
 814121cae8b40be35b7bae301c767d55f0bc45b4 assets/feraritab/blockstates/pisa_block.json
 955abdbda9ee754448c00495dca5f30d79c1c30f assets/feraritab/blockstates/pisa_button.json
 b7f8ff3ccffc5821e4e6f736ee19188dc31021c6 assets/feraritab/blockstates/pisa_door.json
@@ -10,6 +10,7 @@ cf0fdaebed799ca75afc6456024fe0658a2e6219 assets/feraritab/blockstates/pisa_slab.
 5b07f96d214bd89c3302471f695e75e4be34262e assets/feraritab/blockstates/pisa_stairs.json
 39a0c483a70aa1c45881d803d3b4d8fca1fea3e4 assets/feraritab/blockstates/pisa_trapdoor.json
 1a290fd68a0e42c35729ad8a268446664d0e8c05 assets/feraritab/blockstates/pisa_wall.json
+e5137633397a32e42d5416d16895de6c0162d617 assets/feraritab/blockstates/pressure_bomb.json
 b4f622ac8d6da6f06aa1ae770ac5f51fd5a201be assets/feraritab/blockstates/reze_block.json
 9ecc5f57547d3837b869df188599b82f4d439a88 assets/feraritab/blockstates/shit_block.json
 4fc39c4898b9f7b78a3bd294817de85d4f981bae assets/feraritab/blockstates/shit_pressure_plate.json
@@ -45,6 +46,8 @@ c140247ff68f33aa162835e2ae8cf3b1e11fc182 assets/feraritab/models/block/pisa_trap
 e245ff38b780b9b25687bfb060291da5f46cd933 assets/feraritab/models/block/pisa_wall_post.json
 9f5dba145ed59599f70971320079051b4edfa2c7 assets/feraritab/models/block/pisa_wall_side.json
 91d5e87b89a22c3e75854c6734c24a78adebe87b assets/feraritab/models/block/pisa_wall_side_tall.json
+c8b56c68631a8421b66eaeb1b6963aca1904b107 assets/feraritab/models/block/pressure_bomb.json
+4d0fd7a74ffc2922d41543e6f328643a8c442d89 assets/feraritab/models/block/pressure_bomb_down.json
 67cfe5a5a5fb9516e2f24a381835784ca055de4a assets/feraritab/models/block/reze_block.json
 a53ca38e6a808eacaf1ce250ca6c052708a3da6f assets/feraritab/models/block/reze_block_2.json
 45737a465523094927a18df4d599d4f11846f7d9 assets/feraritab/models/block/shit_block.json
@@ -58,6 +61,7 @@ aeb744218a21122abf8578c55b5a0ed591c9a55e assets/feraritab/models/block/shit_turr
 232cfc4efa8d3dc13c628b0169d27af07acd58d6 assets/feraritab/models/item/pisa_slab.json
 5d999fa75a7a1a0ef3ecbd90333f32ab017eade2 assets/feraritab/models/item/pisa_stairs.json
 dd6dbb2761253f5370fd40fdfd46280c808aa482 assets/feraritab/models/item/pisa_trapdoor.json
+9654f90d6106295492fefb2abb3282973eb95c82 assets/feraritab/models/item/pressure_bomb.json
 7cef20aea5f741540fac9611209712cfbc0c606e assets/feraritab/models/item/reze_block.json
 8692521ad978093edc734d471610ec9954251123 assets/feraritab/models/item/shit_block.json
 27bc37d80a39e016fc4cc689c4c166906e079dc2 assets/feraritab/models/item/shit_pressure_plate.json

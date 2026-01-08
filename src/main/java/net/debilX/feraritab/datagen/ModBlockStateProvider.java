@@ -1,11 +1,15 @@
 package net.debilX.feraritab.datagen;
 
 import net.debilX.feraritab.block.ModBlocks;
+import net.debilX.feraritab.block.custom.PressureBomb;
 import net.debilX.feraritab.block.custom.RezeBlock;
 import net.debilX.feraritab.feraritab;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.PressurePlateBlock;
+import net.minecraft.world.level.block.WeightedPressurePlateBlock;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
@@ -30,6 +34,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.SHIT_PRESSURE_PLATE);
 
         rezeBlock();
+        pressureBomb();
 
         stairsBlock(ModBlocks.PISA_STAIRS.get(), blockTexture(ModBlocks.PISA_BLOCK.get()));
         slabBlock(ModBlocks.PISA_SLAB.get(), blockTexture(ModBlocks.PISA_BLOCK.get()), blockTexture(ModBlocks.PISA_BLOCK.get()));
@@ -68,6 +73,19 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 ResourceLocation.fromNamespaceAndPath(feraritab.MOD_ID, "block/" + "reze_block")));
     }
 
+    public void pressureBomb() {
+        ModelFile pressurePlate = models().pressurePlate("pressure_bomb", mcLoc("block/tnt_top"));
+        ModelFile pressurePlateDown = models().pressurePlateDown("pressure_bomb" + "_down", mcLoc("block/tnt_top"));
+        getVariantBuilder(ModBlocks.PRESSURE_BOMB.get())
+                .forAllStates(state -> {
+                    int power = state.getValue(WeightedPressurePlateBlock.POWER);
+                    return ConfiguredModel.builder()
+                            .modelFile(models().pressurePlate("pressure_bomb", mcLoc("block/tnt_top")))
+                            .build();
+                });
+        blockItem(ModBlocks.PRESSURE_BOMB);
+    }
+
     private void blockWithItem(RegistryObject<Block> blockRegistryObject){
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
     }
@@ -81,4 +99,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("feraritab:block/" +
                 ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath() + appendix));
     }
+
+
 }
