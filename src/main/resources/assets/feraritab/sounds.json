@@ -35,5 +35,11 @@
     "sounds": [
       "feraritab:zero_block_fall"
     ]
+  },
+  "paty_block": {
+    "subtitle": "sounds.feraritab.paty_block",
+    "sounds": [
+      "feraritab:paty_block"
+    ]
   }
 }

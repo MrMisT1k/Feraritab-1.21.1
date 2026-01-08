@@ -1,4 +1,5 @@
-// 1.21.1	2026-01-05T20:16:13.7267264	Block States: feraritab
+// 1.21.1	2026-01-08T21:06:21.5502956	Block States: feraritab
+fa39721c78c50b793f5d778be394ebd576ba7da4 assets/feraritab/blockstates/paty_block.json
 814121cae8b40be35b7bae301c767d55f0bc45b4 assets/feraritab/blockstates/pisa_block.json
 955abdbda9ee754448c00495dca5f30d79c1c30f assets/feraritab/blockstates/pisa_button.json
 b7f8ff3ccffc5821e4e6f736ee19188dc31021c6 assets/feraritab/blockstates/pisa_door.json
@@ -14,6 +15,8 @@ b4f622ac8d6da6f06aa1ae770ac5f51fd5a201be assets/feraritab/blockstates/reze_block
 9ecc5f57547d3837b869df188599b82f4d439a88 assets/feraritab/blockstates/shit_block.json
 4fc39c4898b9f7b78a3bd294817de85d4f981bae assets/feraritab/blockstates/shit_pressure_plate.json
 68495b3b8c34cea89e6adf148a07a8f6f2b2b383 assets/feraritab/blockstates/shit_turret.json
+336e648b0615ee8ffd43cab4620b2e548046898b assets/feraritab/models/block/paty_block_off.json
+698408d51f2a46b3ef75c03913ce5351a35a945d assets/feraritab/models/block/paty_block_on.json
 312f949e51ffffdb338629827fe0415e9bfee2fb assets/feraritab/models/block/pisa_block.json
 c9c833bfee76e3a0fdc915d9c365a6bb63ca9d60 assets/feraritab/models/block/pisa_button.json
 26d7fd5669e46aa40f7281e217f7103455abdcc2 assets/feraritab/models/block/pisa_button_pressed.json
@@ -51,6 +54,7 @@ a53ca38e6a808eacaf1ce250ca6c052708a3da6f assets/feraritab/models/block/reze_bloc
 40f4a6b4f2442db439a06f0d5f33e208e952c98a assets/feraritab/models/block/shit_pressure_plate.json
 b11c611141c86fce20f730d173c9d15cab05cf3c assets/feraritab/models/block/shit_pressure_plate_down.json
 aeb744218a21122abf8578c55b5a0ed591c9a55e assets/feraritab/models/block/shit_turret.json
+61d075a86f67ad2a00b00d23d3db83afc12b2387 assets/feraritab/models/item/paty_block.json
 2a9151c31dd58fd885ce72bd9905ce791e19755e assets/feraritab/models/item/pisa_block.json
 16b768c533eee369eac985583fdf26d831b90ba8 assets/feraritab/models/item/pisa_fence_gate.json
 8c991819b2ceca52d9a0cd6fc7930630069ffd08 assets/feraritab/models/item/pisa_ore.json

@@ -50,7 +50,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     public void wallItem(RegistryObject<? extends Block> block, RegistryObject<Block> baseBlock) {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/wall_inventory"))
                 .texture("wall",  ResourceLocation.fromNamespaceAndPath(feraritab.MOD_ID,
-                        "   block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+                        "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
     }
 
     public void trapdoorItem(RegistryObject<? extends Block> block) {

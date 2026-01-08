@@ -37,9 +37,8 @@ public class ModCreativeModTabs {
 
                         pOutput.accept(ModBlocks.PISA_DOOR.get());
                         pOutput.accept(ModBlocks.PISA_TRAPDOOR.get());
-
-
-
+                        pOutput.accept(ModBlocks.PATY_BLOCK.get());
+                            
                     }).build());
 
     public static final RegistryObject<CreativeModeTab> DEBIL2 = CREATIVE_MOD_TABS.register("debil2",

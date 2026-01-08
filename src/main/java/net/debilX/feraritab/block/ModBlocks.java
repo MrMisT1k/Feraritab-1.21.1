@@ -2,6 +2,7 @@ package net.debilX.feraritab.block;
 
 import net.debilX.feraritab.block.custom.ShitTurretBlock;
 import net.debilX.feraritab.block.custom.RezeBlock;
+import net.debilX.feraritab.block.custom.PatyBlock;
 import net.debilX.feraritab.feraritab;
 import net.debilX.feraritab.item.ModItems;
 import net.debilX.feraritab.sound.ModSounds;
@@ -48,7 +49,9 @@ public class ModBlocks {
     public static final RegistryObject<PressurePlateBlock> SHIT_PRESSURE_PLATE = registerBlock("shit_pressure_plate",
             () -> new PressurePlateBlock(BlockSetType.ACACIA, BlockBehaviour.Properties.of().sound(SoundType.MUD).strength(1)));
 
-
+    public static final RegistryObject<Block> PATY_BLOCK = registerBlock("paty_block",
+            () -> new PatyBlock(BlockBehaviour.Properties.of()
+                    .strength(1f).sound(SoundType.AMETHYST)));
 
     public static final RegistryObject<StairBlock> PISA_STAIRS = registerBlock("pisa_stairs",
             () -> new StairBlock(ModBlocks.PISA_BLOCK.get().defaultBlockState(),
