@@ -11,6 +11,7 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -20,26 +21,68 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import java.util.Map;
 import java.util.HashMap;
 import java.util.UUID;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class PatyBlock extends Block {
-    private int age = 0;
 
     public static final BooleanProperty ACTIVE = BooleanProperty.create("active");
+    public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
+    
+    // Счетчик для чередования звуков при установке блока
+    private static final AtomicInteger soundCounter = new AtomicInteger(0);
 
     public PatyBlock(Properties properties) {
         super(properties);
-        this.registerDefaultState(this.stateDefinition.any().setValue(ACTIVE, false));
+        this.registerDefaultState(this.stateDefinition.any().setValue(ACTIVE, false).setValue(FACING, Direction.NORTH));
     }
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(ACTIVE);
+        builder.add(ACTIVE, FACING);
+    }
+
+    @Override
+    public BlockState getStateForPlacement(BlockPlaceContext context) {
+        return this.defaultBlockState()
+                .setValue(FACING, context.getPlayer().getDirection())
+                .setValue(ACTIVE, false);
+    }
+
+    @Override
+    public void setPlacedBy(Level level, BlockPos pos, BlockState state, LivingEntity placer, ItemStack stack) {
+        super.setPlacedBy(level, pos, state, placer, stack);
+        
+        if (!level.isClientSide) {
+            // Определяем какой звук воспроизвести по очереди
+            int soundIndex = soundCounter.getAndIncrement() % 2;
+            
+            if (soundIndex == 0) {
+                level.playSound(
+                        null,
+                        pos,
+                        ModSounds.PATY_1.get(),
+                        SoundSource.BLOCKS,
+                        1.0f,
+                        1.0f
+                );
+            } else {
+                level.playSound(
+                        null,
+                        pos,
+                        ModSounds.PATY_2.get(),
+                        SoundSource.BLOCKS,
+                        1.0f,
+                        1.0f
+                );
+            }
+        }
     }
 
     @Override
@@ -86,5 +129,4 @@ public class PatyBlock extends Block {
             level.setBlock(pos, state.setValue(ACTIVE, Boolean.FALSE), 3);
         }
     }
-
 }

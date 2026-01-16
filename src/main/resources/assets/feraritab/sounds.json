@@ -41,5 +41,17 @@
     "sounds": [
       "feraritab:paty_block"
     ]
+  },
+  "paty_1": {
+    "subtitle": "sounds.feraritab.paty_1",
+    "sounds": [
+      "feraritab:paty_1"
+    ]
+  },
+  "paty_2": {
+    "subtitle": "sounds.feraritab.paty_2",
+    "sounds": [
+      "feraritab:paty_2"
+    ]
   }
 }

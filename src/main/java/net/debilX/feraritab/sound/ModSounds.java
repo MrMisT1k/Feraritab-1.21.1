@@ -15,14 +15,14 @@ public class ModSounds {
 
     public static final RegistryObject<SoundEvent> ZERO_USE = registerSoundEvent("zero_use");
     public static final RegistryObject<SoundEvent> PATY_BLOCK = registerSoundEvent("paty_block");
+    public static final RegistryObject<SoundEvent> PATY_1 = registerSoundEvent("paty_1");
+    public static final RegistryObject<SoundEvent> PATY_2 = registerSoundEvent("paty_2");
 
     public static final RegistryObject<SoundEvent> ZERO_BLOCK_BREAK = registerSoundEvent("zero_block_break");
     public static final RegistryObject<SoundEvent> ZERO_BLOCK_STEP = registerSoundEvent("zero_block_step");
     public static final RegistryObject<SoundEvent> ZERO_BLOCK_PLACE = registerSoundEvent("zero_block_place");
     public static final RegistryObject<SoundEvent> ZERO_BLOCK_HIT = registerSoundEvent("zero_block_hit");
     public static final RegistryObject<SoundEvent> ZERO_BLOCK_FALL = registerSoundEvent("zero_block_fall");
-
-
 
     public static final ForgeSoundType ZERO_BLOCK_SOUNDS = new ForgeSoundType(1f, 1f,
             ZERO_BLOCK_BREAK, ZERO_BLOCK_STEP,

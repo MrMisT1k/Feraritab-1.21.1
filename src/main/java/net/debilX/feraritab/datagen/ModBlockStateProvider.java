@@ -64,17 +64,42 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
 
     private void patyBlock() {
-        getVariantBuilder(ModBlocks.PATY_BLOCK.get()).forAllStates(state -> {
-            if(state.getValue(PatyBlock.ACTIVE)) {
-                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("paty_block_on",
-                        ResourceLocation.fromNamespaceAndPath(feraritab.MOD_ID, "block/" + "paty_block_on")))};
-            } else {
-                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("paty_block_off",
-                        ResourceLocation.fromNamespaceAndPath(feraritab.MOD_ID, "block/" + "paty_block_off")))};
-            }
-        });
-        simpleBlockItem(ModBlocks.PATY_BLOCK.get(), models().cubeAll("paty_block_off",
-                ResourceLocation.fromNamespaceAndPath(feraritab.MOD_ID, "block/" + "paty_block_off")));
+        getVariantBuilder(ModBlocks.PATY_BLOCK.get())
+                .forAllStates(state -> {
+
+                    Direction facing = state.getValue(PatyBlock.FACING);
+                    boolean active = state.getValue(PatyBlock.ACTIVE);
+
+                    String front = active ? "paty_block_on" : "paty_block_off";
+
+                    int yRot = switch (facing) {
+                        case NORTH -> 180;
+                        case SOUTH -> 0;
+                        case WEST -> 90;
+                        case EAST -> 270;
+                        default -> 0;
+                    };
+
+                    return new ConfiguredModel[]{
+                            new ConfiguredModel(
+                                    models().cube(
+                                            "paty_block",
+                                            modLoc("block/paty_block_all"), // down
+                                            modLoc("block/paty_block_all"), // up
+                                            modLoc("block/" + front),       // north (перед)
+                                            modLoc("block/paty_block_all"), // south
+                                            modLoc("block/paty_block_all"), // west
+                                            modLoc("block/paty_block_all")  // east
+                                    ),
+                                    0,
+                                    yRot,
+                                    false
+                            )
+                    };
+                });
+
+        simpleBlockItem(ModBlocks.PATY_BLOCK.get(),
+                models().cubeAll("paty_block_item", modLoc("block/paty_block_all")));
     }
 
     private void rezeBlock() {
