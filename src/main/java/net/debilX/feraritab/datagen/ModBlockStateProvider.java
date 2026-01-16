@@ -2,6 +2,7 @@ package net.debilX.feraritab.datagen;
 
 import net.debilX.feraritab.block.ModBlocks;
 import net.debilX.feraritab.block.custom.RezeBlock;
+import net.debilX.feraritab.block.custom.PatyBlock;
 import net.debilX.feraritab.feraritab;
 import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
@@ -61,6 +62,21 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.PISA_TRAPDOOR);
     }
 
+
+    private void patyBlock() {
+        getVariantBuilder(ModBlocks.PATY_BLOCK.get()).forAllStates(state -> {
+            if(state.getValue(PatyBlock.ACTIVE)) {
+                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("paty_block_on",
+                        ResourceLocation.fromNamespaceAndPath(feraritab.MOD_ID, "block/" + "paty_block_on")))};
+            } else {
+                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("paty_block_off",
+                        ResourceLocation.fromNamespaceAndPath(feraritab.MOD_ID, "block/" + "paty_block_off")))};
+            }
+        });
+        simpleBlockItem(ModBlocks.PATY_BLOCK.get(), models().cubeAll("paty_block_off",
+                ResourceLocation.fromNamespaceAndPath(feraritab.MOD_ID, "block/" + "paty_block_off")));
+    }
+
     private void rezeBlock() {
         getVariantBuilder(ModBlocks.REZE_BLOCK.get()).forAllStates(state -> {
             if(state.getValue(RezeBlock.ACTIVE)) {
@@ -73,6 +89,19 @@ public class ModBlockStateProvider extends BlockStateProvider {
         });
         simpleBlockItem(ModBlocks.REZE_BLOCK.get(), models().cubeAll("reze_block",
                 ResourceLocation.fromNamespaceAndPath(feraritab.MOD_ID, "block/" + "reze_block")));
+    }
+
+    public void pressureBomb() {
+        ModelFile pressurePlate = models().pressurePlate("pressure_bomb", mcLoc("block/tnt_top"));
+        ModelFile pressurePlateDown = models().pressurePlateDown("pressure_bomb" + "_down", mcLoc("block/tnt_top"));
+        getVariantBuilder(ModBlocks.PRESSURE_BOMB.get())
+                .forAllStates(state -> {
+                    int power = state.getValue(WeightedPressurePlateBlock.POWER);
+                    return ConfiguredModel.builder()
+                            .modelFile(models().pressurePlate("pressure_bomb", mcLoc("block/tnt_top")))
+                            .build();
+                });
+        blockItem(ModBlocks.PRESSURE_BOMB);
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject){
