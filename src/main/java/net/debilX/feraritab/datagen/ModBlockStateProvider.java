@@ -1,6 +1,7 @@
 package net.debilX.feraritab.datagen;
 
 import net.debilX.feraritab.block.ModBlocks;
+import net.debilX.feraritab.block.custom.PressureBomb;
 import net.debilX.feraritab.block.custom.RezeBlock;
 import net.debilX.feraritab.block.custom.PatyBlock;
 import net.debilX.feraritab.feraritab;
@@ -8,15 +9,15 @@ import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.PressurePlateBlock;
-import net.minecraft.world.level.block.WeightedPressurePlateBlock;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
@@ -117,16 +118,53 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
 
     public void pressureBomb() {
-        ModelFile pressurePlate = models().pressurePlate("pressure_bomb", mcLoc("block/tnt_top"));
-        ModelFile pressurePlateDown = models().pressurePlateDown("pressure_bomb" + "_down", mcLoc("block/tnt_top"));
+        Map<Integer, ModelFile> unpressedModels = new HashMap<>();
+        Map<Integer, ModelFile> pressedModels = new HashMap<>();
+
+        for (Integer i : PressureBomb.CAMOUFLAGE_MAP.keySet()) {
+            String textureName = "pressure_bomb_" + i;
+            ResourceLocation texture;
+            switch(i){
+                case 1:
+                    texture = mcLoc("block/stone");
+                    break;
+                case 2:
+                    texture = mcLoc("block/dirt");
+                    break;
+                case 3:
+                    texture = mcLoc("block/grass_block_top");
+                    break;
+                case 4:
+                    texture = mcLoc("block/sand");
+                    break;
+                case 5:
+                    texture = mcLoc("block/cobblestone");
+                    break;
+                default:
+                    texture = mcLoc("block/tnt_top");
+                    break;
+            }
+
+            unpressedModels.put(i,
+                    models().pressurePlate(textureName + "_up", texture));
+
+            pressedModels.put(i,
+                    models().pressurePlate(textureName + "_down", texture));
+        }
         getVariantBuilder(ModBlocks.PRESSURE_BOMB.get())
                 .forAllStates(state -> {
-                    int power = state.getValue(WeightedPressurePlateBlock.POWER);
+                    boolean isPowered = state.getValue(PressureBomb.WAS_ACTIVATED);
+                    int camouflage = state.getValue(PressureBomb.CAMOUFLAGE);
+
+                    ModelFile modelToUse = isPowered
+                            ? pressedModels.get(camouflage)
+                            : unpressedModels.get(camouflage);
+
                     return ConfiguredModel.builder()
-                            .modelFile(models().pressurePlate("pressure_bomb", mcLoc("block/tnt_top")))
+                            .modelFile(modelToUse)
                             .build();
                 });
-        blockItem(ModBlocks.PRESSURE_BOMB);
+        simpleBlockItem(ModBlocks.PRESSURE_BOMB.get(), models().pressurePlate("pressure_bomb_inventory",mcLoc("block/tnt_top")));
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject){
