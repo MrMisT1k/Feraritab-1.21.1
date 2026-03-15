@@ -2,6 +2,7 @@ package net.debilX.feraritab;
 
 import com.mojang.logging.LogUtils;
 import net.debilX.feraritab.block.ModBlocks;
+import net.debilX.feraritab.component.ModDataComponentTypes;
 import net.debilX.feraritab.item.ModCreativeModTabs;
 import net.debilX.feraritab.item.ModItems;
 import net.debilX.feraritab.sound.ModSounds;
@@ -41,6 +42,8 @@ public class feraritab {
         ModBlocks.register(modEventBus);
 
         ModSounds.register(modEventBus);
+
+        ModDataComponentTypes.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
